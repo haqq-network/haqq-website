@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import clsx from 'clsx';
-import styles from './page-title.module.css';
 import { Heading } from './heading';
+import styles from './page-title.module.css';
 
 export function PageTitle({
   className,

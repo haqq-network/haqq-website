@@ -1,10 +1,6 @@
 import { PropsWithChildren } from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
-import { CustomImage, LogoType } from '@/types';
-import { DownloadButton } from './download-button';
-import { Heading } from './heading';
-import { Text } from './text';
 import {
   haqqBrandColors,
   haqqLogos,
@@ -12,7 +8,11 @@ import {
   islamicBrandColors,
   islamicLogos,
 } from '@/lib/brand-assets';
+import { CustomImage, LogoType } from '@/types';
 import { BrandColorCard } from './brand-color-card';
+import { DownloadButton } from './download-button';
+import { Heading } from './heading';
+import { Text } from './text';
 
 interface DownloadCardProps {
   isWhiteBackground: boolean;

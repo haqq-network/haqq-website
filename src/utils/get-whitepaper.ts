@@ -1,6 +1,6 @@
+import { cache } from 'react';
 import { FALCONER_ENDPOINT, REVALIDATE_TIME } from '@/constants';
 import { NextRequestInit } from '@/types';
-import { cache } from 'react';
 
 export const revalidate = REVALIDATE_TIME;
 

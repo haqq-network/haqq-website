@@ -1,13 +1,13 @@
 import type { PropsWithChildren } from 'react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import clsx from 'clsx';
 import type { Metadata, Viewport } from 'next';
 import dynamic from 'next/dynamic';
 import Script from 'next/script';
 import { DEPLOY_URL, GA_ID, VERCEL_ENV } from '@/constants';
+import { clashDisplayFont, hkGuiseFont } from '@/lib/fonts';
 import { PHProvider } from '@/providers/posthog';
 import '@/styles/global.css';
-import { clashDisplayFont, hkGuiseFont } from '@/lib/fonts';
-import clsx from 'clsx';
 
 export const metadata: Metadata = {
   title: {

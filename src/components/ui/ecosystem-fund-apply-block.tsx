@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import bgImgData from '@/assets/images/fund-apply-block-background-lines.svg';
-import { Text } from './text';
-import { Heading } from './heading';
 import { Button } from './button';
+import { Heading } from './heading';
+import { Text } from './text';
 
 export function EcosystemFundApplyBlock() {
   return (

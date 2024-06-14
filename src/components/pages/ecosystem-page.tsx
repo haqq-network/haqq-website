@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import linesBgData from '@/assets/images/ecosystem-header-title-block-lines.svg';
-import { EcosystemPartnersBlock } from '../ui/ecosystem-partners-block';
-import { EcosystemPageApplyBlock } from '../ui/ecosystem-apply-block';
 import { Partner } from '@/types';
+import { EcosystemPageApplyBlock } from '../ui/ecosystem-apply-block';
+import { EcosystemPartnersBlock } from '../ui/ecosystem-partners-block';
 
 export function EcosystemPage({ partners }: { partners: Partner[] }) {
   return (

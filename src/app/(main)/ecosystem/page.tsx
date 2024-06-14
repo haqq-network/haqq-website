@@ -1,8 +1,8 @@
+import type { Metadata } from 'next';
 import { EcosystemPage } from '@/components/pages/ecosystem-page';
 import { DEPLOY_URL } from '@/constants';
 import { haqqOpenGraphImages } from '@/lib/shared-metadata';
 import { getHaqqPartnersFromFalconer } from '@/utils/get-partners';
-import type { Metadata } from 'next';
 
 const title = 'Ecosystem';
 const description =

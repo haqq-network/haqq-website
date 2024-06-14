@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { PageTitle } from '../ui/page-title';
 import { MarkdownText } from '../ui/markdown-text';
+import { PageTitle } from '../ui/page-title';
 
 export function WhitepaperPage({ whitepaper }: { whitepaper: string }) {
   return (

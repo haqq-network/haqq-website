@@ -4,9 +4,9 @@ import Link from 'next/link';
 import blogPlaceholderImage1 from '@/assets/images/blog-post-placeholder-1.png';
 import blogPlaceholderImage2 from '@/assets/images/blog-post-placeholder-2.png';
 import blogPlaceholderImage3 from '@/assets/images/blog-post-placeholder-3.png';
-import { Heading } from './heading';
-import { BlogPostCard } from './blog-post-card';
 import { Post } from '@/types';
+import { BlogPostCard } from './blog-post-card';
+import { Heading } from './heading';
 
 export function FeaturedPostBlock({ post }: { post: Post }) {
   const postImage = useMemo(() => {

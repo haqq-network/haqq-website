@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import eclipseImageData from '@/assets/images/index-page-contact-bg.png';
-import { Heading } from './heading';
 import { env } from '@/env/client';
+import { Heading } from './heading';
 
 const FeedbackForm = dynamic(
   async () => {

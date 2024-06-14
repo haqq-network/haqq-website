@@ -4,8 +4,10 @@ import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
-import logoImageData from '@/assets/images/logo.svg';
 import { useMediaQuery } from 'usehooks-ts';
+import logoImageData from '@/assets/images/logo.svg';
+import { env } from '@/env/client';
+import { Heading } from './heading';
 import {
   DiscordIcon,
   GithubIcon,
@@ -13,8 +15,6 @@ import {
   TelegramIcon,
   TwitterIcon,
 } from './icons';
-import { Heading } from './heading';
-import { env } from '@/env/client';
 
 const SubscribeForm = dynamic(async () => {
   const { SubscribeForm } = await import('@/components/forms/subscribe-form');

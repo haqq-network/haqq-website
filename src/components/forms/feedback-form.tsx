@@ -1,22 +1,22 @@
 'use client';
 import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
+import axios from 'axios';
 import { usePostHog } from 'posthog-js/react';
 import { useForm } from 'react-hook-form';
 import Turnstile from 'react-turnstile';
 import * as yup from 'yup';
-import axios from 'axios';
 import {
   ContactFormFields,
   FormState,
   HookedFormInput,
 } from './hooked-form-input';
+import { HookedFormTextarea } from './hooked-form-textarea';
 import { Button } from '../ui/button';
-import { Modal } from '../ui/modal';
 import { Heading } from '../ui/heading';
+import { Modal } from '../ui/modal';
 import { Ruler } from '../ui/ruler';
 import { Text } from '../ui/text';
-import { HookedFormTextarea } from './hooked-form-textarea';
 
 const MESSAGE_MIN_LENGTH = 100;
 

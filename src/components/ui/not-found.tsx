@@ -3,7 +3,7 @@ import Link from 'next/link';
 import notFoundGlowImageData from '@/assets/images/not-found-glow.png';
 import { Button } from '@/components/ui/button';
 
-export default function NotFound() {
+export function NotFound() {
   return (
     <div className="min relative flex flex-1 flex-col items-center justify-center py-20 md:py-40">
       <Image

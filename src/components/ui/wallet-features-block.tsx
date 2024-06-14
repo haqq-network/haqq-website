@@ -2,12 +2,12 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import ledgerImageData from '@/assets/images/landing-ledger-item.svg';
 import maskData from '@/assets/images/mask.png';
-import { CardHeading, WalletCardText } from './wallet-card';
 import {
   LikeIcon,
   SocialLoginShieldBorderImage,
   SocialLoginShieldIcon,
 } from './icons';
+import { CardHeading, WalletCardText } from './wallet-card';
 
 function StakingBlock() {
   return (

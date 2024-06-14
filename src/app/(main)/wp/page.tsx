@@ -1,8 +1,8 @@
+import type { Metadata } from 'next';
 import { WhitepaperPage } from '@/components/pages/whitepaper-page';
 import { DEPLOY_URL } from '@/constants';
 import { haqqOpenGraphImages } from '@/lib/shared-metadata';
 import { getWhitepaperContentFromFalconer } from '@/utils/get-whitepaper';
-import type { Metadata } from 'next';
 
 const title = 'Whitepaper';
 const description =

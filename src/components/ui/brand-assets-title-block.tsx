@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import styles from './brand-assets-title-block.module.css';
+import { DownloadButton } from './download-button';
 import { Heading } from './heading';
 import { Text } from './text';
-import { DownloadButton } from './download-button';
 
 export function BrandAssetsTitleBlock() {
   return (

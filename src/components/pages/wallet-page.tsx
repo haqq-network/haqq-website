@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import walletImageData from '@/assets/images/wallet-bg.jpg';
-import { WalletHeroBlock } from '../ui/wallet-hero-block';
-import { WalletFeaturesBlock } from '../ui/wallet-features-block';
-import { WalletFAQBlock } from '../ui/wallet-faq-block';
 import { DiscordIcon, GithubIcon, TwitterIcon } from '../ui/icons';
+import { WalletFAQBlock } from '../ui/wallet-faq-block';
+import { WalletFeaturesBlock } from '../ui/wallet-features-block';
+import { WalletHeroBlock } from '../ui/wallet-hero-block';
 
 function HeaderLogo() {
   return (

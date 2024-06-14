@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import clsx from 'clsx';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 import iphoneWalletScreenshotData from '@/assets/images/wallet-iphone-screenshot.png';
@@ -11,7 +12,6 @@ import {
   StakingIcon,
 } from './icons';
 import { WalletCardText } from './wallet-card';
-import dynamic from 'next/dynamic';
 
 const WalletDownloadButtons = dynamic(
   async () => {

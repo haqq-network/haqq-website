@@ -1,10 +1,10 @@
 'use client';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import clsx from 'clsx';
-import styles from './main-statistics-block.module.css';
-import { MemoizedAnimatedNumbers } from './animated-numbers';
 import { useInViewport } from 'react-in-viewport';
 import { ChainStats } from '@/types';
+import { MemoizedAnimatedNumbers } from './animated-numbers';
+import styles from './main-statistics-block.module.css';
 
 export function StatisticsBlockStatCard({
   title,

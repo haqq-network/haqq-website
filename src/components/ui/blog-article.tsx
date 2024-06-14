@@ -1,7 +1,7 @@
 import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
-import { MarkdownText } from './markdown-text';
 import { CopyIcon, TwitterIcon } from './icons';
+import { MarkdownText } from './markdown-text';
 import { Tooltip } from './tooltip';
 // import { Heading } from '../heading/heading';
 // import { TelegramIcon, TwitterIcon } from '../icons';

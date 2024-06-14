@@ -1,8 +1,8 @@
+import type { Metadata } from 'next';
 import { MainPage } from '@/components/pages/main-page';
 import { DEPLOY_URL } from '@/constants';
 import { haqqOpenGraphImages } from '@/lib/shared-metadata';
 import { getChainStatsFromFalconer } from '@/utils/get-chain-stats';
-import type { Metadata } from 'next';
 
 const title = 'Home of ethical web3';
 const description =

@@ -1,23 +1,23 @@
 'use client';
 import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
+import axios from 'axios';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePostHog } from 'posthog-js/react';
 import { useForm } from 'react-hook-form';
 import Turnstile from 'react-turnstile';
 import * as yup from 'yup';
-import axios from 'axios';
 import {
   FormState,
   HookedFormInput,
   SubscribeFormFields,
 } from './hooked-form-input';
 import { Button } from '../ui/button';
-import { Modal } from '../ui/modal';
 import { Heading } from '../ui/heading';
-import { Text } from '../ui/text';
+import { Modal } from '../ui/modal';
 import { Ruler } from '../ui/ruler';
+import { Text } from '../ui/text';
 
 const schema: yup.ObjectSchema<SubscribeFormFields> = yup
   .object({

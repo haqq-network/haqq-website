@@ -1,8 +1,8 @@
 'use client';
 import { useCallback, useState } from 'react';
 import clsx from 'clsx';
-import { Button } from './button';
 import { BrandColorAsset } from '@/types';
+import { Button } from './button';
 
 export function BrandColorCard({ color, colorType, hex }: BrandColorAsset) {
   const [isCopied, setIsCopied] = useState(false);

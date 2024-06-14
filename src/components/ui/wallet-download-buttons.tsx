@@ -1,11 +1,11 @@
 'use client';
 import Link from 'next/link';
+import { usePostHog } from 'posthog-js/react';
 import { getDynamicLink } from '@/utils/get-dynamic-link';
 import {
   WalletDownloadButton,
   WalletDownloadWithQrButton,
 } from './wallet-download-button';
-import { usePostHog } from 'posthog-js/react';
 
 export function WalletDownloadButtons() {
   const posthog = usePostHog();

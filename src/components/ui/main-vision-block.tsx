@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import styles from './main-vision-block.module.css';
 import { AboveTitle } from './above-title';
-import { Text } from './text';
 import { Heading } from './heading';
+import styles from './main-vision-block.module.css';
+import { Text } from './text';
 
 function BorderRuler({
   className,

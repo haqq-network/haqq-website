@@ -6,9 +6,9 @@ import blogPlaceholderImage1 from '@/assets/images/blog-post-placeholder-1.png';
 import blogPlaceholderImage2 from '@/assets/images/blog-post-placeholder-2.png';
 import blogPlaceholderImage3 from '@/assets/images/blog-post-placeholder-3.png';
 import { Post } from '@/types';
-import { Heading } from './heading';
 import { BlogPostCard } from './blog-post-card';
 import { BlogTabs } from './blog-tabs';
+import { Heading } from './heading';
 
 export function PostsBlock({ posts, tags }: { posts: Post[]; tags: string[] }) {
   const [tab, setTab] = useState<string>('All posts');

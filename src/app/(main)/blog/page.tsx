@@ -1,8 +1,8 @@
+import type { Metadata } from 'next';
 import { BlogPage } from '@/components/pages/blog-page';
 import { DEPLOY_URL, REVALIDATE_TIME } from '@/constants';
 import { haqqOpenGraphImages } from '@/lib/shared-metadata';
 import { getHaqqBlogPostsFromFalconer } from '@/utils/get-blog-posts';
-import type { Metadata } from 'next';
 
 export const dynamicParams = true;
 export const revalidate = REVALIDATE_TIME;

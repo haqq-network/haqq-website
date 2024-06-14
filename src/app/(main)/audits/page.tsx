@@ -1,7 +1,7 @@
+import type { Metadata } from 'next';
 import { AuditsPage } from '@/components/pages/audits-page';
 import { DEPLOY_URL } from '@/constants';
 import { haqqOpenGraphImages } from '@/lib/shared-metadata';
-import type { Metadata } from 'next';
 
 const title = 'Audits';
 const description = '';

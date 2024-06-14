@@ -1,11 +1,11 @@
 import dynamic from 'next/dynamic';
-import { MainHeroBlock } from '../ui/main-hero-block';
-import { MainAboutBlock } from '../ui/main-about-block';
-import { MainStatisticsBlock } from '../ui/main-statistics-block';
-import { MainMissionBlock } from '../ui/main-mission-block';
-import { MainVisionBlock } from '../ui/main-vision-block';
 import { ChainStats } from '@/types';
+import { MainAboutBlock } from '../ui/main-about-block';
 import { MainDevelopersBlock } from '../ui/main-developers-block';
+import { MainHeroBlock } from '../ui/main-hero-block';
+import { MainMissionBlock } from '../ui/main-mission-block';
+import { MainStatisticsBlock } from '../ui/main-statistics-block';
+import { MainVisionBlock } from '../ui/main-vision-block';
 
 const MainContactBlock = dynamic(
   async () => {

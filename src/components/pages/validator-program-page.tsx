@@ -2,12 +2,12 @@ import { PropsWithChildren } from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import bgImgData from '@/assets/images/validators-bg-lines.svg';
 import joinSectionImgData from '@/assets/images/join-section-lines.svg';
-import { Heading } from '../ui/heading';
-import { Text } from '../ui/text';
+import bgImgData from '@/assets/images/validators-bg-lines.svg';
 import { Button } from '../ui/button';
+import { Heading } from '../ui/heading';
 import { CommissionIcon, LimitIcon, VotingIcon } from '../ui/icons';
+import { Text } from '../ui/text';
 
 type ValidatorBenefits = 'commission' | 'limit' | 'voting';
 

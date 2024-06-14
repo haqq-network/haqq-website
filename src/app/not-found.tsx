@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
+import { Footer } from '@/components/ui/footer';
+import { Header } from '@/components/ui/header';
+import { NotFound } from '@/components/ui/not-found';
 import { DEPLOY_URL } from '@/constants';
 import { haqqOpenGraphImages } from '@/lib/shared-metadata';
-import NotFound from '@/components/ui/not-found';
-import { Header } from '@/components/ui/header';
-import { Footer } from '@/components/ui/footer';
 
 const title = 'Not Found';
 

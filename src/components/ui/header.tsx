@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useScrollLock } from 'usehooks-ts';
 import logoImageData from '@/assets/images/logo.svg';
+import { BurgerButton } from './burger-button';
 import { BurgerMenu } from './burger-menu';
 import { Button } from './button';
-import { BurgerButton } from './burger-button';
 
 function HeaderNavLink({
   href,

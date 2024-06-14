@@ -3,9 +3,9 @@ import { useCallback, useMemo, useState } from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Tab, Tabs } from './tabs';
-import { Heading } from './heading';
 import { Partner, PartnerStatus, PartnerType } from '@/types';
+import { Heading } from './heading';
+import { Tab, Tabs } from './tabs';
 
 function PartnerTypeOrStatus({
   status,
