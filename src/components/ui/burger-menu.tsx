@@ -82,11 +82,9 @@ function BurgerMenuSocialLink({
 export function BurgerMenu({
   className,
   onClose,
-  turnstileSiteKey,
 }: {
   className?: string;
   onClose?: () => void;
-  turnstileSiteKey?: string;
 }) {
   return (
     <div

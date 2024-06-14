@@ -35,7 +35,7 @@ function HeaderNavLink({
   );
 }
 
-export function Header({ turnstileSiteKey }: { turnstileSiteKey?: string }) {
+export function Header() {
   const [isBurgerMenuOpen, setBurgerMenuOpen] = useState(false);
   const { lock, unlock } = useScrollLock();
 

@@ -17,13 +17,7 @@ const MainContactBlock = dynamic(
   { ssr: false },
 );
 
-export function MainPage({
-  stats,
-  turnstileSiteKey,
-}: {
-  stats?: ChainStats;
-  turnstileSiteKey?: string;
-}) {
+export function MainPage({ stats }: { stats?: ChainStats }) {
   return (
     <section>
       <MainHeroBlock />
