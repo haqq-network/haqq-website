@@ -3,7 +3,6 @@ import { BlogArticle as BlogArticleComponent } from './blog-article';
 
 const meta: Meta<typeof BlogArticleComponent> = {
   component: BlogArticleComponent,
-  title: 'haqq-website/ui-kit',
   parameters: {
     layout: 'centered',
   },

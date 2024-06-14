@@ -3,7 +3,6 @@ import { Breadcrumb as BreadcrumbComponent } from './breadcrumb';
 
 const meta: Meta<typeof BreadcrumbComponent> = {
   component: BreadcrumbComponent,
-  title: 'haqq-website/ui-kit',
 };
 
 export default meta;

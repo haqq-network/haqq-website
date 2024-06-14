@@ -3,7 +3,6 @@ import { BlogTabs as BlogTabsComponent } from './blog-tabs';
 
 const meta: Meta<typeof BlogTabsComponent> = {
   component: BlogTabsComponent,
-  title: 'haqq-website/ui-kit',
 };
 
 export default meta;

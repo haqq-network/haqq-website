@@ -3,7 +3,6 @@ import { MarkdownText as MarkdownTextComponent } from './markdown-text';
 
 const meta: Meta<typeof MarkdownTextComponent> = {
   component: MarkdownTextComponent,
-  title: 'haqq-website/ui-kit',
 };
 
 export default meta;
