@@ -25,10 +25,12 @@ export function BlogPage({
   posts,
   featuredPost,
   tags,
+  currentTag,
 }: {
   posts: Post[];
   featuredPost: Post | undefined;
   tags: string[];
+  currentTag?: string | null;
 }) {
   return (
     <section>
@@ -36,7 +38,9 @@ export function BlogPage({
 
       <div className="flex flex-col py-[80px]">
         {featuredPost && <FeaturedPostBlock post={featuredPost} />}
-        {posts.length > 0 && <PostsBlock posts={posts} tags={tags} />}
+        {posts.length > 0 && (
+          <PostsBlock posts={posts} tags={tags} currentTag={currentTag} />
+        )}
       </div>
     </section>
   );

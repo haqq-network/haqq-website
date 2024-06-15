@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 export interface BlogPostCardProps {
   image: StaticImageData | null;
@@ -91,12 +92,20 @@ export function BlogPostCard({
           <div className="flex flex-row flex-wrap gap-[6px]">
             {tags.map((tag) => {
               return (
-                <div
+                <Link
                   key={tag}
-                  className="max-w-fit rounded-[2px] border border-haqq-border px-[10px] py-[6px] text-center text-[11px] leading-[1.55em] md:leading-[18px] lg:text-[12px]"
+                  className={clsx(
+                    'max-w-fit rounded-[2px] border border-haqq-border px-[10px] py-[6px]',
+                    'text-center text-[11px] capitalize leading-[1.55em] md:leading-[18px] lg:text-[12px]',
+                    'transition-colors duration-100 hover:border-white/80',
+                  )}
+                  href={{
+                    pathname: '/blog',
+                    query: { tag: tag.toLowerCase() },
+                  }}
                 >
                   {tag}
-                </div>
+                </Link>
               );
             })}
           </div>

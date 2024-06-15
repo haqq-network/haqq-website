@@ -22,8 +22,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: { tag?: string | null };
+}) {
   const { posts, tags } = await getHaqqBlogPostsFromFalconer();
+  const initialTag = searchParams.tag ? String(searchParams.tag) : null;
 
   let featuredPost;
   const postsToRender = [];
@@ -37,6 +42,11 @@ export default async function Page() {
   }
 
   return (
-    <BlogPage featuredPost={featuredPost} posts={postsToRender} tags={tags} />
+    <BlogPage
+      featuredPost={featuredPost}
+      posts={postsToRender}
+      tags={tags}
+      currentTag={initialTag}
+    />
   );
 }

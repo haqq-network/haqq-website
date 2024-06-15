@@ -34,7 +34,11 @@ export const getHaqqBlogPostsFromFalconer = cache(async () => {
     });
 
     for (const post of sortedPosts) {
-      tags.push(...post.tags);
+      tags.push(
+        ...post.tags.map((tag) => {
+          return tag.toLowerCase();
+        }),
+      );
     }
 
     return { posts, tags: [...new Set(tags)] };

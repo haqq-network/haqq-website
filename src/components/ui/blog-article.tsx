@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { CopyIcon, TwitterIcon } from './icons';
@@ -72,12 +73,20 @@ export function BlogArticle({
           <div className="mt-[20px] flex flex-row flex-wrap gap-[6px] md:mt-[24px] lg:mt-[32px]">
             {tags.map((tag) => {
               return (
-                <div
+                <Link
                   key={tag}
-                  className="max-w-fit rounded-[2px] border border-haqq-border px-[10px] py-[6px] text-center text-[11px] leading-[1.55em] md:leading-[18px] lg:text-[12px]"
+                  className={clsx(
+                    'max-w-fit rounded-[2px] border border-haqq-border px-[10px] py-[6px]',
+                    'text-center text-[11px] capitalize leading-[1.55em] md:leading-[18px] lg:text-[12px]',
+                    'transition-colors duration-100 hover:border-white/80',
+                  )}
+                  href={{
+                    pathname: '/blog',
+                    query: { tag: tag.toLowerCase() },
+                  }}
                 >
                   {tag}
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -93,8 +102,9 @@ export function BlogArticle({
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(articleLink)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="cursor-pointer transition-colors duration-100 ease-out hover:text-white"
                 >
-                  <TwitterIcon className="cursor-pointer transition-colors duration-100 ease-out hover:text-white" />
+                  <TwitterIcon />
                 </Link>
                 {/* <TelegramIcon className="hover:text-white cursor-pointer transition-colors duration-100 ease-out" /> */}
                 <div className="leading-[0]">
