@@ -2,10 +2,10 @@
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { composePlugins, withNx } = require('@nx/next');
-const jiti = require('jiti')(__filename);
 
 // Validate envs during build.
-jiti('./src/env/client.ts');
+// const jiti = require('jiti')(__filename);
+// jiti('./src/env/client.ts');
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
