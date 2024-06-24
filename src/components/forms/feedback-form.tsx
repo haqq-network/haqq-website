@@ -1,7 +1,6 @@
 'use client';
 import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
-import axios from 'axios';
 import { usePostHog } from 'posthog-js/react';
 import { useForm } from 'react-hook-form';
 import Turnstile from 'react-turnstile';
@@ -35,10 +34,13 @@ const schema: yup.ObjectSchema<ContactFormFields> = yup
   .required();
 
 async function submitForm(form: ContactFormFields & { token: string }) {
-  return await axios.post<{ message: string } | { error: string }>(
-    '/api/feedback',
-    form,
-  );
+  return await fetch('/api/feedback', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(form),
+  });
 }
 
 export function FeedbackForm({
@@ -86,9 +88,10 @@ export function FeedbackForm({
             setSuccessModalOpen(true);
             posthog.capture('submit feedback success');
           } else {
+            const responseData = await response.json();
             setContactFormState(FormState.error);
-            if ('error' in response.data) {
-              setError(response.data.error);
+            if ('error' in responseData) {
+              setError(responseData.error);
             }
             setErrorModalOpen(true);
             posthog.capture('submit feedback failed');

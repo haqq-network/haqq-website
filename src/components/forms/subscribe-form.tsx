@@ -1,7 +1,6 @@
 'use client';
 import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
-import axios from 'axios';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePostHog } from 'posthog-js/react';
@@ -29,10 +28,13 @@ const schema: yup.ObjectSchema<SubscribeFormFields> = yup
   .required();
 
 async function submitForm(form: SubscribeFormFields & { token: string }) {
-  return await axios.post<{ message: string } | { error: string }>(
-    '/api/subscribe',
-    form,
-  );
+  return await fetch('/api/subscribe', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(form),
+  });
 }
 
 export function SubscribeForm({
@@ -84,9 +86,10 @@ export function SubscribeForm({
             setSuccessModalOpen(true);
             posthog.capture('subscribe to newsletter success');
           } else {
+            const responseData = await response.json();
             setSubscribeFormState(FormState.error);
-            if ('error' in response.data) {
-              setError(response.data.error);
+            if ('error' in responseData) {
+              setError(responseData.error);
             }
             setErrorModalOpen(true);
             posthog.capture('subscribe to newsletter failed');
