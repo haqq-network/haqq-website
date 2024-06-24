@@ -75,7 +75,7 @@ export function PostsBlock({
           tabs={['all posts', ...tags]}
           current={tab}
           onChange={(tag) => {
-            router.push(`/blog?tag=${tag.toLowerCase()}`);
+            router.replace(`/blog?tag=${tag.toLowerCase()}`);
           }}
         />
 
