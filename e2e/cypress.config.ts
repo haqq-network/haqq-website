@@ -6,7 +6,7 @@ export default defineConfig({
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
       webServerCommands: { default: 'nx run haqq-website:start' },
-      ciWebServerCommand: 'nx run haqq-website:serve-static',
+      ciWebServerCommand: 'nx run haqq-website:start',
     }),
     baseUrl: 'http://localhost:3000',
   },
