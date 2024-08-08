@@ -8,17 +8,14 @@ export function DynamicLinkRedirect() {
   const posthog = usePostHog();
 
   useEffect(() => {
+    const posthogId = params.get('posthog_id');
+    if (posthogId && posthogId !== 'undefined' && posthogId !== '') {
+      posthog.identify(posthogId);
+    }
+
     const goTo = params.get('go_to');
-    const distinctId = params.get('distinct_id');
-
-    if (distinctId && goTo) {
-      if (distinctId !== 'undefined' && distinctId !== '') {
-        posthog.identify(distinctId);
-
-        if (goTo !== 'undefined' && goTo !== '') {
-          redirect(goTo);
-        }
-      }
+    if (goTo && goTo !== 'undefined' && goTo !== '') {
+      redirect(goTo);
     }
   }, [params, posthog]);
 
