@@ -19,11 +19,10 @@ export function IdentifyWalletUsers() {
       const isHaqqWallet = Boolean(window.ethereum?.isHaqqWallet);
 
       if (isHaqqWallet) {
-        const distinctId =
-          window.__HAQQWALLET__?.POSTHOG_DISTINCT_ID ??
-          posthog.get_distinct_id();
+        const walletDistinctId = window.__HAQQWALLET__?.POSTHOG_DISTINCT_ID;
+        console.log('IdentifyWalletUsers', { walletDistinctId });
 
-        posthog.identify(distinctId);
+        posthog.identify(walletDistinctId ?? posthog.get_distinct_id());
       }
     }
   }, [posthog]);
