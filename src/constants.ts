@@ -9,5 +9,5 @@ export const DEPLOY_URL =
         ? `https://${process.env['NEXT_PUBLIC_VERCEL_URL']}`
         : 'http://localhost:3000';
 export const REVALIDATE_TIME = 300;
-export const FALCONER_ENDPOINT = 'https://falconer.haqq.sh' as const;
+export const FALCONER_ENDPOINT = 'https://falconer.haqq.network' as const;
 export const GA_ID = 'G-4CW1ECK0EV';
